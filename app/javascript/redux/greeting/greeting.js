@@ -1,6 +1,6 @@
 const Endpoint = '/v1/greeting';
 
-//action types
+// action types
 const FETCH_GREETING = 'FETCH_GREETING';
 
 // initial state
@@ -14,9 +14,9 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-//action creators
+// action creators
 export const fetchGreeting = () => async (dispatch) => {
   const response = await fetch(Endpoint, {
     method: 'GET',
@@ -27,4 +27,4 @@ export const fetchGreeting = () => async (dispatch) => {
   });
   const payload = await response.json();
   dispatch({ type: FETCH_GREETING, payload });
-}
+};

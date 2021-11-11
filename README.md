@@ -30,14 +30,21 @@ bundle install
 Setup database with:
 
 ```
-   rails db:setup
-   rails db:migrate
+rails db:setup
+rails db:migrate
 ```
 
 install node modules with:
 
 ```
-   yarn
+yarn
+```
+
+Webpaper configuration with:
+
+```
+rails webpacker:install
+rails webpacker:install:react
 ```
 
 ### Github Actions
